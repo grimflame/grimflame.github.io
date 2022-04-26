@@ -101,13 +101,6 @@ const versus_container = document.querySelector("#versus-container");
 const villain_container = document.querySelector(".villain-container");
 const villain_list = document.querySelector(".villain-list");
 
-/*const canvas = document.createElement("canvas");
-const context = canvas.getContext("2d");
-canvas.width = 100;
-canvas.height = 100;
-document.body.appendChild(canvas); 
-context.fillStyle = "green";
-context.fillRect(0, 0, canvas.width, canvas.height);*/
 let player = "Gon";
 
 start.classList.add('fadeIn');
@@ -174,6 +167,7 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => 
     {
         player = button.lastElementChild.textContent;
+        versus_container.firstElementChild.textContent = `${player} vs.`;
 
         select.classList.remove('fadeIn');
         select.classList.add('fadeOut');
@@ -193,6 +187,9 @@ buttons.forEach((button) => {
             versus.classList.add('fadeIn');
         }, 1000)
         
+        setTimeout(() => {
+            randomMove();
+        }, 2000);
     });
 });
 
@@ -264,7 +261,3 @@ let randomMove = () =>
 
     setInterval(frame, 1);
 }
-
-setTimeout(() => {
-    randomMove();
-}, 6000);
