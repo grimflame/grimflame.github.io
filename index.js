@@ -90,12 +90,24 @@ const playButton = document.querySelector(".button");
 const container = document.querySelector(".container");
 const wrapper = document.querySelector(".wrapper");
 const start = document.querySelector("#start");
-const select = document.querySelector("#select");
 
+const select = document.querySelector("#select");
 const player_wrapper = document.querySelector(".player-wrapper");
 const buttons = document.querySelectorAll(".player-choice");
 const player_title = document.querySelector(".player-title");
 
+const versus = document.querySelector("#versus")
+const versus_container = document.querySelector("#versus-container");
+const villain_container = document.querySelector(".villain-container");
+const villain_list = document.querySelector(".villain-list");
+
+/*const canvas = document.createElement("canvas");
+const context = canvas.getContext("2d");
+canvas.width = 100;
+canvas.height = 100;
+document.body.appendChild(canvas); 
+context.fillStyle = "green";
+context.fillRect(0, 0, canvas.width, canvas.height);*/
 let player = "Gon";
 
 start.classList.add('fadeIn');
@@ -171,16 +183,88 @@ buttons.forEach((button) => {
             select.parentNode.removeChild(select);
         }, 1000);
         
-        /*setTimeout(() =>
+        setTimeout(() =>
         {
-            start.style.display = 'none';
-            select.style.display = 'block';
+            versus.style.display = 'block';
         }, 500);
 
-        setTimeout(() => 
+        setTimeout(() =>
         {
-            select.classList.add("fadeIn");
+            versus.classList.add('fadeIn');
         }, 1000)
-        })*/
+        
     });
 });
+
+let villains = ['Chrollo', 'Hisoka', 'Meruem'];
+let j = 0;
+
+let randomMax = Math.floor(Math.random() * (17 - 15 + 1) + 15);
+
+let randomMove = () => 
+{
+    for (let i = 0; i < randomMax; i++)
+    {
+        villains.push(villains[j]);
+        let li_item = document.createElement('li');
+        let header_item = document.createElement('h1');
+        let header_content = document.createTextNode(villains[i]);
+        header_item.appendChild(header_content);
+        li_item.appendChild(header_item);
+        villain_list.appendChild(li_item);
+
+        if (j == 3 - 1)
+        {
+            j = 0;
+        }
+        else
+        {
+            j++;
+        }
+    }
+
+    let id = null;
+    let topPos = -1.5;
+    let maxTopPos = -58.35;
+
+    if (randomMax === 15)
+    {
+        maxTopPos = -58.35;
+    }
+    else
+    if (randomMax === 16)
+    {
+        maxTopPos = -61.85;
+    }
+    else
+    {
+        maxTopPos = -65.25;
+    }
+
+    let frame = () =>
+    {
+        if (topPos <= maxTopPos)
+        {
+            clearInterval();
+        }
+        else
+        {
+            if (Math.abs(maxTopPos-topPos) < 10)
+            {
+                let velocity = 1;
+                velocity *= 0.3;
+                topPos -= 0.15 * velocity;
+            }   
+            else{
+                topPos -= 0.15
+            }
+            villain_list.style.top = topPos + 'em';
+        }
+    }
+
+    setInterval(frame, 1);
+}
+
+setTimeout(() => {
+    randomMove();
+}, 6000);
