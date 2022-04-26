@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>RPS</title>
-</head>
-<body>
-    <p>hi</p>
-</body>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="wrapper" id="start">
+        <div class="container">
+          <h1>
+            Jankenpon
+          </h1>
+          <button class="button">
+            Play
+          </button>
+        </div>
+      </div>
+      <div class="wrapper" id="select">
+        <div class="container">
+          <h1 class="player-title">
+            Choose your player
+          </h1>
+          <div class="player-wrapper">
+            <div class="player-choice">
+              <div class="player-img">
+                <img src="https://64.media.tumblr.com/5b6e2c9bff45dfb77ab5c46fcec34a35/a3879ce69ade4b95-fa/s540x810/0d8dc18850e0154836de535605924b353f049688.gifv">
+              </div>
+              <div class="ph-container">
+                <p class="player-header">Gon</p>
+              </div>
+            </div>
+            <div class="player-choice">
+              <div class="player-img">
+                <img src="http://pa1.narvii.com/6416/5f06dfee86cd6347bfa0b06afbbcbaf51602826f_00.gif">
+              </div>
+              <div class="ph-container">
+                <p class="player-header">Killua</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
 </html>

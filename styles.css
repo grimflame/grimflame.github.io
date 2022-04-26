@@ -1,0 +1,178 @@
+*
+{
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Ubuntu";
+}
+
+body
+{
+  background-color: #292929;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.main
+{
+  width: 100%;
+  height: 100%;
+  margin-top: 3em;
+  display: grid;
+  place-items: center;
+  grid-template-areas: "inner-div";
+}
+
+.wrapper
+{
+    opacity: 0%;
+    height: 100%;
+    width: 100%;
+    grid-area: inner-div;
+}
+
+.container
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-title
+{
+  cursor: default;
+}
+
+.button
+{
+  color: white;
+  border-style: none;
+  background-color: #E67300;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+    
+}
+
+.buttonHover
+{
+    transition: 1s;
+    color: white;
+    border-style: none;
+    background-color: #E67300;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#select
+{
+    transition: 0.2s;
+    display: none;
+}
+
+.player-wrapper
+{
+  transition: 0.25s;
+  
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 15em;
+  justify-content: center;
+  text-align: center;
+  gap: 1em;
+  margin: 2em 0 0 0;
+  cursor: default;
+}
+
+.player-wrapper-hover
+{
+    transition: 0.25s;
+  
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 15em;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+    margin: 3em 0 0 0;
+    cursor: default;
+}
+
+.player-choice
+{
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    background-color: #171717;
+    border-radius: 0.5em;
+}
+
+.player-choice-hover
+{
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    background-color: #171717;
+    border-radius: 0.5em;
+    margin: 0.5em;
+}
+
+.player-wrapper img
+{
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.player-choice
+{
+  cursor: pointer;
+}
+
+.player-img
+{
+ width: 100%;
+ height: 45%;
+}
+
+.player-header
+{
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+
+.fadeIn
+{
+    transition: 1s;
+    opacity: 100%;
+}
+
+.fadeOut
+{
+  transition: 1s;
+  opacity: 0%;
+}
+
+/*footer
+{
+  background-color: #1f1f1f;
+  padding: 3em;
+  text-align: center;
+  color: grey;
+  font-style: italic;
+}*/
