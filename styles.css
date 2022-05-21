@@ -9,20 +9,28 @@
 
 body
 {
-  background-image: url('gon.png');
+  background-color: rgb(41, 41, 41);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   color: white;
 }
 
-canvas
+.killua-body
 {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0em;
-    left: 0em;
-    z-index: -1;
+  transition: 4s;
+  background-image: url('images/wallpapers/killua-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gon-body
+{
+  transition: 4s;
+  background-image: url('images/wallpapers/gon-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main
@@ -37,8 +45,6 @@ canvas
 .wrapper
 {
     opacity: 0%;
-    height: 100%;
-    width: 100%;
     grid-area: inner-div;
 }
 
@@ -195,10 +201,97 @@ canvas
     margin-left: 0.5em;
 }
 
+.choices-container
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+  margin: 4em auto 1em;
+  padding: 4em;
+  cursor: pointer;
+}
+
+.message
+{
+  margin: 1em;
+  font-size: 1em;
+  font-style: italic;
+}
+
+.choice
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: rgb(34, 34, 34);
+  padding: 2em;
+  border-radius: 1em;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+
+.battle-info
+{
+  display: flex;
+  width: 55%;
+  flex-direction: row;
+  background-color: rgb(27, 27, 27);
+  border-radius: 1em;
+}
+
+#battle
+{
+  transition: 2s;
+  display: none;
+}
+
+.icon-container
+{
+  background-image: url("images/avatars/killua.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+  padding: 3em;
+}
+
+.hi
+{
+  padding: 1em;
+  width: 100%;
+}
+
+.hi h1
+{
+  font-size: 2.25em;
+}
+
+.hi p
+{
+  margin: 1em 0 0.25em;
+}
+
+.health-bar
+{
+  background-color: rgb(44, 44, 44);
+  width: 100%;
+  height: 1em;
+}
+
+.health 
+{
+  transition: 2s;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+}
+
 .fadeIn
 {
-    transition: 1s;
-    opacity: 100%;
+  transition: 1s;
+  opacity: 100%;
 }
 
 .fadeOut
@@ -206,12 +299,3 @@ canvas
   transition: 1s;
   opacity: 0%;
 }
-
-/*footer
-{
-  background-color: #1f1f1f;
-  padding: 3em;
-  text-align: center;
-  color: grey;
-  font-style: italic;
-}*/

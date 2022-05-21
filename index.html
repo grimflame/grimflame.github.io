@@ -7,11 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Jankenpon</title>
   </head>
 
   <body>
-    
     <div class="main">
       <div class="wrapper" id="start">
         <div class="container">
@@ -49,17 +48,56 @@
         </div>
       </div>
       <div class="wrapper" id="versus">
-            <div class="container" id="versus-container">
-                <h1></h1>
-                <div class="villain-container">
-                    <ul class="villain-list">
-                        <li><h1>Chrollo</h1></li>
-                        <li><h1>Hisoka</h1></li>
-                        <li><h1>Meruem</h1></li>
-                    </ul>
-                </div>
+          <div class="container" id="versus-container">
+              <h1></h1>
+              <div class="villain-container">
+                  <ul class="villain-list">
+                      <li><h1>Chrollo</h1></li>
+                      <li><h1>Hisoka</h1></li>
+                      <li><h1>Meruem</h1></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="wrapper" id="battle">
+        <div class="container" id="battle-container">
+          <div class="battle-info" id="player">
+            <div class="icon-container" id="player-icon"></div>
+            <div class="hi">
+              <h1 id="player-name">Player</h1>
+              <p>HP: </p>
+              <div class="health-bar">
+                <div class="health" id="player-health"></div>
+              </div>
             </div>
-        </div>  
+          </div>
+          <div class="choices-container">
+            <div class="choice" id="rock">
+              <h1>✊</h1>
+              <p>Guu</p>
+            </div>
+            <div class="choice" id="paper">
+              <h1>✋</h1>
+              <p>Choki</p>
+            </div>
+            <div class="choice" id="scissors">
+              <h1>✌️</h1>
+              <p>Paa</p>
+            </div>
+          </div>
+          <span class="message" id="result"></span>
+          <div class="battle-info" id="villain">
+            <div class="icon-container" id="villain-icon"></div>
+            <div class="hi">
+              <h1 id="villain-name">Hisoka</h1>
+              <p>HP: </p>
+              <div class="health-bar">
+                <div class="health" id="enemy-health"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="./index.js"></script>
   </body>
